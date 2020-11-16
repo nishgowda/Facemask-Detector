@@ -1,6 +1,11 @@
 [
 {
   "directory": "/Users/nishgowda/Desktop/Code/Projects/facemask/build",
+  "command": "/usr/bin/clang++ -isystem /usr/local/include/opencv4 -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -std=gnu++14 -o CMakeFiles/facemask_test.dir/src/tests.cpp.o -c /Users/nishgowda/Desktop/Code/Projects/facemask/src/tests.cpp",
+  "file": "/Users/nishgowda/Desktop/Code/Projects/facemask/src/tests.cpp"
+},
+{
+  "directory": "/Users/nishgowda/Desktop/Code/Projects/facemask/build",
   "command": "/usr/bin/clang++ -isystem /usr/local/include/opencv4 -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -std=gnu++14 -o CMakeFiles/facemask.dir/src/main.cpp.o -c /Users/nishgowda/Desktop/Code/Projects/facemask/src/main.cpp",
   "file": "/Users/nishgowda/Desktop/Code/Projects/facemask/src/main.cpp"
 }

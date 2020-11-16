@@ -26,9 +26,16 @@ file(GLOB source_files
         "*.h"
         "*.cpp"
         "include/*.h"
-        "src/*.cpp")
+        "src/main.cpp")
+file(GLOB test_files
+        "*.h"
+        "*.cpp"
+        "include/*.h"
+        "src/tests.cpp")
 # specify the executable target to be built
 add_executable(facemask  ${source_files} )
+add_executable(facemask_test ${test_files})
 
 # tell it to link the executable target against OpenCV
 target_link_libraries(facemask ${OpenCV_LIBS} )
+target_link_libraries(facemask_test ${OpenCV_LIBS} )

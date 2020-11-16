@@ -1,0 +1,6 @@
+language: cpp
+compiler:
+  - gcc
+before_script:
+  - cd build
+script: ./facemask_test Users/nishgowda/opencv/opencv/data/haarcascades/haarcascade_frontalface_default.xml /Users/nishgowda/opencv/opencv/data/haarcascades/haarcascade_eye.xml /Users/nishgowda/Desktop/Code/Projects/facemask/data/haarcascade_mcs_mouth.xml /Users/nishgowda/opencv/opencv/data/haarcascades/haarcascade_upperbody.xml

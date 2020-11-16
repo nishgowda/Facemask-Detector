@@ -14,7 +14,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -29,7 +30,8 @@
 					"name" : "facemask",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -38,8 +40,15 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "facemask::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-facemask-Debug-dd7d8103b2fe944a1b7e.json",
+					"jsonFile" : "target-facemask-Debug-8109de1c68be6585af45.json",
 					"name" : "facemask",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "facemask_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-facemask_test-Debug-ed4de464a773af10852b.json",
+					"name" : "facemask_test",
 					"projectIndex" : 0
 				}
 			]

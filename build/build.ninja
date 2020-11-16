@@ -58,6 +58,39 @@ build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
 build edit_cache: phony CMakeFiles/edit_cache.util
 
 # =============================================================================
+# Object build statements for EXECUTABLE target facemask_test
+
+
+#############################################
+# Order-only phony target for facemask_test
+
+build cmake_object_order_depends_target_facemask_test: phony || CMakeFiles/facemask_test.dir
+
+build CMakeFiles/facemask_test.dir/src/tests.cpp.o: CXX_COMPILER__facemask_test_Debug ../src/tests.cpp || cmake_object_order_depends_target_facemask_test
+  DEP_FILE = CMakeFiles/facemask_test.dir/src/tests.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk -std=gnu++14
+  INCLUDES = -isystem /usr/local/include/opencv4
+  OBJECT_DIR = CMakeFiles/facemask_test.dir
+  OBJECT_FILE_DIR = CMakeFiles/facemask_test.dir/src
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target facemask_test
+
+
+#############################################
+# Link the executable facemask_test
+
+build facemask_test: CXX_EXECUTABLE_LINKER__facemask_test_Debug CMakeFiles/facemask_test.dir/src/tests.cpp.o | /usr/local/lib/libopencv_dnn.4.2.0.dylib /usr/local/lib/libopencv_gapi.4.2.0.dylib /usr/local/lib/libopencv_highgui.4.2.0.dylib /usr/local/lib/libopencv_ml.4.2.0.dylib /usr/local/lib/libopencv_objdetect.4.2.0.dylib /usr/local/lib/libopencv_photo.4.2.0.dylib /usr/local/lib/libopencv_stitching.4.2.0.dylib /usr/local/lib/libopencv_video.4.2.0.dylib /usr/local/lib/libopencv_videoio.4.2.0.dylib /usr/local/lib/libopencv_imgcodecs.4.2.0.dylib /usr/local/lib/libopencv_calib3d.4.2.0.dylib /usr/local/lib/libopencv_features2d.4.2.0.dylib /usr/local/lib/libopencv_flann.4.2.0.dylib /usr/local/lib/libopencv_imgproc.4.2.0.dylib /usr/local/lib/libopencv_core.4.2.0.dylib
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk
+  LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  /usr/local/lib/libopencv_dnn.4.2.0.dylib  /usr/local/lib/libopencv_gapi.4.2.0.dylib  /usr/local/lib/libopencv_highgui.4.2.0.dylib  /usr/local/lib/libopencv_ml.4.2.0.dylib  /usr/local/lib/libopencv_objdetect.4.2.0.dylib  /usr/local/lib/libopencv_photo.4.2.0.dylib  /usr/local/lib/libopencv_stitching.4.2.0.dylib  /usr/local/lib/libopencv_video.4.2.0.dylib  /usr/local/lib/libopencv_videoio.4.2.0.dylib  /usr/local/lib/libopencv_imgcodecs.4.2.0.dylib  /usr/local/lib/libopencv_calib3d.4.2.0.dylib  /usr/local/lib/libopencv_features2d.4.2.0.dylib  /usr/local/lib/libopencv_flann.4.2.0.dylib  /usr/local/lib/libopencv_imgproc.4.2.0.dylib  /usr/local/lib/libopencv_core.4.2.0.dylib
+  OBJECT_DIR = CMakeFiles/facemask_test.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = facemask_test
+  TARGET_PDB = facemask_test.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target facemask
 
 
@@ -101,7 +134,7 @@ build facemask: CXX_EXECUTABLE_LINKER__facemask_Debug CMakeFiles/facemask.dir/sr
 #############################################
 # Folder: /Users/nishgowda/Desktop/Code/Projects/facemask/build
 
-build all: phony facemask
+build all: phony facemask_test facemask
 
 # =============================================================================
 # Built-in targets

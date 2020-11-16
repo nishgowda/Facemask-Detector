@@ -1,3 +1,4 @@
 /Users/nishgowda/Desktop/Code/Projects/facemask/build/CMakeFiles/rebuild_cache.dir
 /Users/nishgowda/Desktop/Code/Projects/facemask/build/CMakeFiles/edit_cache.dir
+/Users/nishgowda/Desktop/Code/Projects/facemask/build/CMakeFiles/facemask_test.dir
 /Users/nishgowda/Desktop/Code/Projects/facemask/build/CMakeFiles/facemask.dir

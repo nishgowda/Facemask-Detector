@@ -1,6 +1,7 @@
 /**
  * @file facemask.h
  * @author Nish Gowda 
+ * 
  * facemask headerfile using opencv to detect if a person is
  * wearing a mask.
  */
@@ -11,11 +12,12 @@
 #include <opencv2/imgproc.hpp>
 #include <opencv2/core.hpp>
 
-using namespace cv;
 #define WEARING "Thank you for wearing a mask!"
 #define NOTWEARING "Please wear a mask!"
 #define WEARINGCOLOR Scalar(255, 255, 255)
 #define NOTWEARINGCOLOR Scalar(0, 0, 255)
+
+using namespace cv;
 
 // Cascade struct contains the location of the Cascade Filters
 typedef struct cascades {
@@ -43,7 +45,7 @@ class Facemask {
             cascade.upperBodyCascade = "";
         }
         void setCascades(Cascades cas);
-        int detectMasks(int bwThreshold, Point p, int thickness, 
+        void detectMasks(int bwThreshold, Point p, int thickness, 
                         int fontScale, HersheyFonts font);
 };
 
@@ -57,6 +59,7 @@ void Facemask::setCascades(Cascades cas) {
     cascade.mouthCascade = cas.mouthCascade;
     cascade.upperBodyCascade = cas.upperBodyCascade;
 }
+
 /**
  * uses opencv to detect persons face and determines if the user is wearing
  * a mask.
@@ -67,7 +70,7 @@ void Facemask::setCascades(Cascades cas) {
  * @param fontScale the font size
  * @param font type of font
  */ 
-int Facemask::detectMasks(int bwThreshold, Point p, int thickness, 
+void Facemask::detectMasks(int bwThreshold, Point p, int thickness, 
                         int fontScale, HersheyFonts font) {
     double scale = 1;
     VideoCapture capture;
@@ -84,7 +87,7 @@ int Facemask::detectMasks(int bwThreshold, Point p, int thickness,
     Scalar color = Scalar(255, 255, 255);
     if (capture.isOpened())
     {
-        std::cout << "Face Detection Starting\n Press q or Q to quit" << std::endl;
+        std::cout << "Face Detection Starting\nPress q or Q to quit" << std::endl;
         while (1)
         {
             capture.read(frame);  // read in the frame and image 
@@ -141,9 +144,6 @@ int Facemask::detectMasks(int bwThreshold, Point p, int thickness,
         capture.release();
         destroyAllWindows();
     }
-    else {
+    else 
         std::cout << "Could not open camera" << std::endl;
-        return 0;
-    }
-    return 1;
 }

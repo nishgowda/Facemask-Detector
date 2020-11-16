@@ -1,15 +1,23 @@
 language: cpp
-compiler: gcc
 
-os: linux
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-7
+install:
+- cd ${TRAVIS_BUILD_DIR}
+# install latest LCOV (1.9 was failing for me) [1]
+
+- wget http://ftp.de.debian.org/debian/pool/main/l/lcov/lcov_1.11.orig.tar.gz
+- tar xf lcov_1.11.orig.tar.gz
+- sudo make -C lcov-1.11/ install
+
+- gem install coveralls-lcov
+
 before_script:
-  - cd build 
-script: 
-  - ./facemask_test Users/nishgowda/opencv/opencv/data/haarcascades/haarcascade_frontalface_default.xml /Users/nishgowda/opencv/opencv/data/haarcascades/haarcascade_eye.xml /Users/nishgowda/Desktop/Code/Projects/facemask/data/haarcascade_mcs_mouth.xml /Users/nishgowda/opencv/opencv/data/haarcascades/haarcascade_upperbody.xml
+  - cd ${TRAVIS_BUILD_DIR}
+  - lcov --directory . --zerocounters
 
+compiler:
+  - gcc
+  - clang
+
+script:
+  - cd ${TRAVIS_BUILD_DIR}
+  - make && ./facemask_test Users/nishgowda/opencv/opencv/data/haarcascades/haarcascade_frontalface_default.xml /Users/nishgowda/opencv/opencv/data/haarcascades/haarcascade_eye.xml /Users/nishgowda/Desktop/Code/Projects/facemask/data/haarcascade_mcs_mouth.xml /Users/nishgowda/opencv/opencv/data/haarcascades/haarcascade_upperbody.xml

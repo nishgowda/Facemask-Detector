@@ -3,14 +3,6 @@ compiler:
   - gcc
   - clang
 
-sudo: required
-
-dist: trusty
-
-before_script:
-  - mkdir built
-  - cd built
-  - cmake --version
-  - cmake -DCMAKE_VERBOSE_MAKEFILE=ON ..
-
-script: make && ./facemask_test
+# test for incorrect args
+script:
+  - make facemask_test && ./facemask_test 1 2 3 4

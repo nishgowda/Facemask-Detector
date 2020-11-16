@@ -1,0 +1,7 @@
+{
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "python.pythonPath": "/Users/nishgowda/miniconda3/bin/python",
+    "files.associations": {
+        "vector": "cpp"
+    }
+}

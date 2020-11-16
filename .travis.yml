@@ -12,7 +12,6 @@ install:
 
   # Download v3.0.0 .zip file and extract.
   - git clone https://github.com/opencv/opencv.git
-  - unzip opencv
   - cd opencv
   - git checkout tags/4.2.0
   - cd ..
@@ -43,4 +42,4 @@ install:
 script:
   - cd ${TRAVIS_BUILD_DIR}
   - cmake .
-  - make 
+  - make facemask_test

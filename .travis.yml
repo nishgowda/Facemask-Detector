@@ -11,4 +11,4 @@ before_script:
   - cmake --version
   - cmake -DCMAKE_VERBOSE_MAKEFILE=ON ..
 
-  script: make && ./facemask_test
+script: make && ./facemask_test

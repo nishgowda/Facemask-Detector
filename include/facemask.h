@@ -14,7 +14,7 @@
 
 #define WEARING "Thank you for wearing a mask!"
 #define NOTWEARING "Please wear a mask!"
-#define WEARINGCOLOR Scalar(255, 255, 255)
+#define WEARINGCOLOR Scalar(0, 255, 0)
 #define NOTWEARINGCOLOR Scalar(0, 0, 255)
 
 using namespace cv;

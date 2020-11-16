@@ -16,7 +16,7 @@ cmds = []
 for line in lines:
     cmds.append(line.rstrip('\n'))
 print("Executing now...")
-args = ("./facemask_test", cmds[0], cmds[1], cmds[2], cmds[3])
+args = ("./build/facemask", cmds[0], cmds[1], cmds[2], cmds[3])
 process = subprocess.Popen(args)
 process.wait()
 

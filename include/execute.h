@@ -29,7 +29,11 @@ int executeCameraMask(char **args, int len) {
     } else if (len > 5) {
         perror("Too many arguments specified");
         return 0;
-    } else {
+    } else if (strcmp(args[1], "1") == 0) {
+        return 1;
+    }
+    else
+    {
         int bwThreshold = 80;
         HersheyFonts font = FONT_HERSHEY_SIMPLEX;
         Point p1;

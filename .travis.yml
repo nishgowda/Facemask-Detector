@@ -1,6 +1,19 @@
 language: cpp
 compiler:
   - gcc
-before_script:
+os: linux
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++ -7
+
+script: 
   - cd build
-script: ./facemask_test Users/nishgowda/opencv/opencv/data/haarcascades/haarcascade_frontalface_default.xml /Users/nishgowda/opencv/opencv/data/haarcascades/haarcascade_eye.xml /Users/nishgowda/Desktop/Code/Projects/facemask/data/haarcascade_mcs_mouth.xml /Users/nishgowda/opencv/opencv/data/haarcascades/haarcascade_upperbody.xml
+  - export CC=gcc-7
+  - export CXX=g++-7
+  - cmake --version
+  - cmake CMakeLists.txt
+  - cmake --build . --target facemask_test
+

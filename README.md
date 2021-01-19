@@ -1,6 +1,5 @@
 # Facemask-Detector
 
-[![Build Status](https://travis-ci.com/nishgowda/facemask-detector.svg?branch=master)](https://travis-ci.com/nishgowda/facemask-detector)
 ## How?
 Mask wearing has become a contingent part of life with the rise of Covid-19. The goal of this program is to detect if a person is wearing a mask in their camera feed. Please note that the results are not quite perfect yet and further testing and experimentation are required.
 
